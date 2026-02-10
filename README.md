@@ -5,7 +5,8 @@ The CleanStart Valkey image provides a production-ready, security-hardened conta
 📌 **Base Foundation**: Security-hardened, minimal base OS designed for enterprise containerized environments.
 
 **Image Path**: `ghcr.io/cleanstart-containers/valkey`
-**Registry**: cleanstart Registry
+
+**Registry**: `cleanstart`
 
 ## Key Features
 Core capabilities and strengths of this container
@@ -27,13 +28,10 @@ Typical scenarios where this container excels
 Download the container image from the registry
 
 ```bash
-docker pull ghcr.io/cleanstart-containers/valkey:valkey
+docker pull ghcr.io/cleanstart-containers/valkey:latest
 ```
 ```bash
-docker pull ghcr.io/cleanstart-containers/valkey:container
-```
-```bash
-docker pull ghcr.io/cleanstart-containers/valkey:enterprise
+docker pull ghcr.io/cleanstart-containers/valkey:latest-dev
 ```
 
 ## Basic Run
@@ -49,7 +47,6 @@ Deploy with production security settings
 ```bash
 docker run -d --name valkey-prod \
   --security-opt=no-new-privileges \
-  --user 1000:1000 \
   --restart unless-stopped \
   ghcr.io/cleanstart-containers/valkey:latest
 ```
